@@ -342,5 +342,5 @@ ${seconds} Seconds ✨`;
 
 setInterval(updateLoveTimer,1000);
 
-updateLoveTimer(); Har 2 second me ek item girega */
+updateLoveTimer();
 
