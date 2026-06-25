@@ -299,7 +299,7 @@ function createHeart(){
 
 function updateLoveTimer(){
 
-const startDate = new Date("2025-12-28T00:00:00");
+const startDate = new Date("2020-12-10T00:00:00");
 
 const now = new Date();
 
