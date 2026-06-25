@@ -241,6 +241,10 @@ lovePage.style.display = "none";
 
 document.body.style.overflow = "auto";
 
+const music = document.getElementById("loveMusic");
+music.pause();
+music.currentTime = 0;    
+
 };
 
 }
