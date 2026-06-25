@@ -258,3 +258,38 @@ passwordPopup.style.display = "none";
 }
 
 };
+/* ❤️✨ Falling Love Effect */
+
+const loveItems = ["❤️","💖","✨","🌹"];
+
+function createHeart(){
+
+    const item = document.createElement("div");
+
+    item.className = "falling-heart";
+
+    item.innerHTML =
+        loveItems[Math.floor(Math.random()*loveItems.length)];
+
+    item.style.left = Math.random()*window.innerWidth + "px";
+
+    item.style.fontSize =
+        (18 + Math.random()*18) + "px";
+
+    item.style.animationDuration =
+        (8 + Math.random()*6) + "s";
+
+    item.style.opacity =
+        (0.6 + Math.random()*0.4);
+
+    document.body.appendChild(item);
+
+    setTimeout(()=>{
+        item.remove();
+    },15000);
+
+}
+
+/* Har 2 second me ek item girega */
+
+setInterval(createHeart,2000);
