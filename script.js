@@ -355,11 +355,19 @@ const finalVideo=document.getElementById("finalVideo");
 
 if(finalBtn){
 
-finalBtn.onclick=()=>{
+finalBtn.onclick = () => {
 
-surprise.style.display="block";
+    const music = document.getElementById("loveMusic");
 
-finalVideo.play();
+    if(music){
+        music.pause();
+        music.currentTime = 0;
+    }
+
+    surprise.style.display = "block";
+
+    finalVideo.currentTime = 0;
+    finalVideo.play();
 
 };
 
@@ -367,13 +375,18 @@ finalVideo.play();
 
 if(closeSurprise){
 
-closeSurprise.onclick=()=>{
+closeSurprise.onclick = () => {
 
-surprise.style.display="none";
+    surprise.style.display = "none";
 
-finalVideo.pause();
+    finalVideo.pause();
+    finalVideo.currentTime = 0;
 
-finalVideo.currentTime=0;
+    const music = document.getElementById("loveMusic");
+
+    if(music){
+        music.play();
+    }
 
 };
 
